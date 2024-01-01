@@ -299,7 +299,6 @@ Ideally, each partition should be consumed by a separate consumer in a consumer 
 
 **References:**  
 https://docs.confluent.io/kafka/introduction.html  
-https://medium.com/@abhirup.acharya009/kafka-102-architecture-of-kafka-cbce4b45bb2f  
 https://thepracticaldeveloper.com/spring-boot-kafka-config/  
 https://www.baeldung.com/spring-kafka  
 https://kafka.apache.org/quickstart  
