@@ -313,6 +313,8 @@ Kafka moves lot of data from n/w to disk and disk to n/w. It is critically impor
     2024-01-01T15:43:46.567+05:30  INFO 90749 --- [ntainer#1-0-C-1] c.n.advance.kafka.service.KafkaConsumer  : String Message Received: {"id":2,"message":"hello"}
     ```
 
+**To learn about Streaming systems and Redis PubSub implementation, check repo: https://github.com/nickskewl/RedisPubSubDemo**  
+
 **References:**  
 https://docs.confluent.io/kafka/introduction.html  
 https://thepracticaldeveloper.com/spring-boot-kafka-config/  
