@@ -1,4 +1,9 @@
-**Kafka:**  
+Contents:
+1. [Kafka overview](#Kafka-overview)
+2. [Kafka implementation](#Kafka-implementation)
+
+<a id="Kafka-overview"></a>
+# **Kafka:**  
 - is a highly organized distributed messaging system based on publish-subscribe methodology.
 - Producers input data into Kafka topics, while consumers retrieve this data from those topics. Kafka topics can be partitioned, enabling the parallel processing of data, and topics can be replicated across multiple brokers for fault tolerance.
 - It is excellent for handling large volumes of data, making sure messages get where they need to go, and keeping track of what's been sent and received. 
@@ -85,7 +90,8 @@ Ideally, each partition should be consumed by a separate consumer in a consumer 
 - We can have more consumers than partitions in a consumer group but consumers will be idle as they won't have partitions to process.
 - When consumers are less than partitions then some consumer will be reading from multiple partitions and thus losing the ability to handle partitions concurrently. Hence, not utilizing the parallel processing capabilities of kafka, leading to uneven workloads and causing delays in processing real time data.
 
-**Kafka implementation:**  
+<a id="Kafka-implementation"></a>
+# **Kafka implementation:**  
 1. Download Kafka: https://kafka.apache.org/downloads
 2. Kafka with Kraft:  
    a. Open terminal, Generate a Cluster UUID
