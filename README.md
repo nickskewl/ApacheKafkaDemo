@@ -296,3 +296,11 @@ Ideally, each partition should be consumed by a separate consumer in a consumer 
     2024-01-01T15:43:46.567+05:30  INFO 90749 --- [ntainer#1-0-C-1] c.n.advance.kafka.service.KafkaConsumer  : [STRING] received key 2 | Partition: 2 | Payload: {"id":2,"message":"hello"} 
     2024-01-01T15:43:46.567+05:30  INFO 90749 --- [ntainer#1-0-C-1] c.n.advance.kafka.service.KafkaConsumer  : String Message Received: {"id":2,"message":"hello"}
     ```
+
+**References:**  
+https://docs.confluent.io/kafka/introduction.html  
+https://medium.com/@abhirup.acharya009/kafka-102-architecture-of-kafka-cbce4b45bb2f  
+https://thepracticaldeveloper.com/spring-boot-kafka-config/  
+https://www.baeldung.com/spring-kafka  
+https://kafka.apache.org/quickstart  
+https://developer.confluent.io/courses/apache-kafka/partitions/  
