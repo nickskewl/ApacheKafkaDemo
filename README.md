@@ -12,6 +12,11 @@ Contents:
   2. Metrics and monitoring.
   3. Event driven architectures like microservices communication.
 
+
+**kafka Architecture:**  
+<img width="1295" alt="image" src="https://github.com/nickskewl/ApacheKafkaDemo/assets/23614036/33c37cc9-d4ef-47f2-a78f-2e12add20d53">
+
+
 **Key Terminology:**
 1. **Record:** Record in Kafka is the data and is in form of key-value pair. Each record in Kafka consists of a key, a value, and optional metadata.
 2. **Topics:** Categories where records are stored. Think of them as a folder name containing related files, where the folders represent topics and the files within them signify individual records.
@@ -89,6 +94,17 @@ Kafka uses below partitioning strategy to determine in which partition a message
 Ideally, each partition should be consumed by a separate consumer in a consumer group for optimal parallel processing.
 - We can have more consumers than partitions in a consumer group but consumers will be idle as they won't have partitions to process.
 - When consumers are less than partitions then some consumer will be reading from multiple partitions and thus losing the ability to handle partitions concurrently. Hence, not utilizing the parallel processing capabilities of kafka, leading to uneven workloads and causing delays in processing real time data.
+
+**Why kafka is fast?**  
+Kafka is designed for high throughput i.e. design to move large no of records in a short span of time.
+1. By optimizing for sequential I/O, Kafka achieves high throughput and performance, making it efficient in handling large-scale data streams, supporting real-time processing, and ensuring reliability in distributed environments.
+
+Sequential I/O -> writes reach 100MB/s
+Random I/O -> writes reach 100KB/s
+
+2. Performance -> focus on efficiency.
+Kafka moves lot of data from n/w to disk and disk to n/w. It is critically important to eliminate excess copy when moving data.
+-> It uses Zero copy principle.
 
 <a id="Kafka-implementation"></a>
 # **Kafka implementation:**  
@@ -301,5 +317,6 @@ Ideally, each partition should be consumed by a separate consumer in a consumer 
 https://docs.confluent.io/kafka/introduction.html  
 https://thepracticaldeveloper.com/spring-boot-kafka-config/  
 https://www.baeldung.com/spring-kafka  
+https://medium.com/@abhirup.acharya009/kafka-102-architecture-of-kafka-cbce4b45bb2f  
 https://kafka.apache.org/quickstart  
 https://developer.confluent.io/courses/apache-kafka/partitions/  
